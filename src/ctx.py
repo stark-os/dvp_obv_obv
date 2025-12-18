@@ -1,7 +1,7 @@
 # -------- IMPORTATIONS --------
 
 #exes
-from obv.exe import *
+from obv.src.exe import *
 
 
 
@@ -24,7 +24,7 @@ class obvCtx:
 
 		#dat seg
 		for de in sbj.dats:
-			res += "dat" + OBV__SEP + hexOnN(len(de), 2) + OBV__SEP
+			res += "dat" + OBV__SEP + hexOnN(len(de)<<3, 4) + OBV__SEP
 			for b in de:
 				res += hexOnN(b, 2)
 			res += '\n'
